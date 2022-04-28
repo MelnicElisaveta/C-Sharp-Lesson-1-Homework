@@ -15,13 +15,29 @@ namespace C_Sharp_Lesson_1_Homework
           * |--------|--------------------------------------|
           * |  2     | odd                                  |
           * |--------|--------------------------------------|
-          * | -1     | the value should be greater then zero|
+          * | -1     | the value should be greater than zero|
           * -------------------------------------------------
           * 
           */
             //your code here
+
+            if (number < 0)
+            {
+                Console.WriteLine("the value should be greater than zero");
+            }
+
+            else if (number % 2 == 0)
+            {
+                Console.WriteLine("odd");
+            }
+            else
+            {
+                Console.WriteLine("even");
+            }
         }
-        public void NumberDivideToFour(int number)
+               
+            
+            public void NumberDivideToFour(int number)
         {
             /* Exercise 2
         * using a ternary operator write a program that print if number divide to 4
@@ -35,7 +51,11 @@ namespace C_Sharp_Lesson_1_Homework
         * --------------------------------------------
         */
             //your code here
+            var result = (number % 4 == 0) ? "The number divide to 4" : "The number doesn't divide to 4";
+
+            Console.WriteLine(result);
         }
+
         public void DayOfWeek(string day)
         {
             /* Exercise 3
@@ -54,10 +74,33 @@ namespace C_Sharp_Lesson_1_Homework
              * |default value |Wrong value! Please give a day of a week|
              * ---------------------------------------------------------
              */
-            
+
             switch (day)
             {
-                //your code here
+                case "Monday":
+                    Console.WriteLine("1");
+                    break;
+                case "Tuesday":
+                    Console.WriteLine("2");
+                    break;
+                case "Wednesday":
+                    Console.WriteLine("3");
+                    break;
+                case "Thursday":
+                    Console.WriteLine("4");
+                    break;
+                case "Friday":
+                    Console.WriteLine("5");
+                    break;
+                case "Saturday":
+                    Console.WriteLine("6");
+                    break;
+                case "Sunday":
+                    Console.WriteLine("7");
+                    break;
+                default:
+                    Console.WriteLine("Wrong value! Please give a day of a week");
+                    break;
             }
         }
         public void CheckLetterIfVowel(char character)
@@ -73,7 +116,43 @@ namespace C_Sharp_Lesson_1_Homework
              * |  b  | b is a consonant  |
              * ---------------------------
              */
-            //your code here
+
+            /*Method 1: using a switch case
+            switch (character)
+            {
+                case 'a':
+                    Console.WriteLine(character + " is Vowel.");
+                    break;
+                case 'e':
+                    Console.WriteLine(character + " is Vowel.");
+                    break;
+                case 'i':
+                    Console.WriteLine(character + " is Vowel.");
+                    break;
+                case 'o':
+                    Console.WriteLine(character + " is Vowel.");
+                    break;
+                case 'u':
+                    Console.WriteLine(character + " is Vowel.");
+                    break;
+
+                default:
+                    Console.WriteLine(character + " is Consonant.");
+                    break;
+            }
+        } */
+
+            //Method 2: using if
+            if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u')
+            {
+
+                Console.WriteLine(character + " is Vowel.");
+
+            }
+            else if ((character >= 'a' && character <= 'z'))
+            {
+                Console.WriteLine(character + " is Consonant.");
+            }
 
         }
         public static void Main(String[] args)
